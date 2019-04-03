@@ -1,8 +1,9 @@
 import React from 'react';
+import logo from '../images/logo.png';
 export default function header(props){
     return(
         <header>
-        <img className="header__logo" src="icon/logo.png" />
+        <img className="header__logo" src={logo} />
         <h1 className="header__title">Weather Channel</h1>
       </header>
     )
