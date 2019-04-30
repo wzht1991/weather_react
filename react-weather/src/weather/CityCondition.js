@@ -3,12 +3,12 @@ import umberella from '../images/icon-umberella.png';
 import wind from '../images/icon-wind.png';
 import compass from '../images/icon-compass.png';
 export default function CityCondition(props){
-    const {data,unit}=props;
+    const {data,unit,curcity,country,description}=props;
     return(
         <section className="weather-condition">
-          <div className="weather-condition__location">{data.city}</div>
-          <div style={{textAlign: "center", fontSize: 14}}>Clear</div>
-          <div className="weather-condition__temp">{data.temp[unit]} {unit}</div>
+          <div className="weather-condition__location">{curcity} {country}</div>
+          <div style={{textAlign: "center", fontSize: 14}}>{data.description}</div>
+          <div className="weather-condition__temp">{data.temp[unit]}{unit}</div>
           <div className="weather-condition__desc">
             <div>
               <img src={umberella} />
